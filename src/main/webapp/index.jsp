@@ -9,6 +9,7 @@
 <body>
     <h1>Join our email list</h1>
     <p>To jon our email list, enter your name and email address below.</p>
+
     <form action="emailList" method="post">
         <input name="action" type="hidden" value="add">
 

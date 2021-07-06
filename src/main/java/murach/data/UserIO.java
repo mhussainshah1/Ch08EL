@@ -3,9 +3,7 @@ package murach.data;
 import murach.business.User;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class UserIO {
 
@@ -68,6 +66,27 @@ public class UserIO {
                 line = in.readLine();
             }
             return users;
+        } catch (IOException e) {
+            System.out.println(e);
+            return null;
+        }
+    }
+
+    public static Map<String, User> getUserMap(String filepath) {
+        try (BufferedReader in = new BufferedReader(new FileReader(filepath));) {
+            Map<String, User> usersMap = new HashMap<>();
+
+            String line = in.readLine();
+            while (line != null) {
+                StringTokenizer tokenizer = new StringTokenizer(line, "|");
+                String email = tokenizer.nextToken();
+                String firstName = tokenizer.nextToken();
+                String lastName = tokenizer.nextToken();
+                User user = new User(firstName, lastName, email);
+                usersMap.put(email,user);
+                line = in.readLine();
+            }
+            return usersMap;
         } catch (IOException e) {
             System.out.println(e);
             return null;

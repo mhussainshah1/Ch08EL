@@ -68,5 +68,10 @@
         <%--        or--%>
         <p>Product code: ${item["product"].code}</p>
 
+        <%--use map attribute [] operator--%>
+        <p>First name: ${usersMap[email].firstName}</p>
+        <%--this does not work because the attribute is enclosed in quotes        --%>
+        <p>First name: ${usersMap["email"].firstName}</p>
+
 </body>
 </html>

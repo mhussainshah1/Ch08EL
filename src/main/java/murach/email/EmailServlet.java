@@ -15,6 +15,7 @@ import murach.data.UserIO;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet(name = "EmailServlet", value = "/emailList")
 public class EmailServlet extends HttpServlet {
@@ -61,6 +62,15 @@ public class EmailServlet extends HttpServlet {
         p.setCode("pf01");
         LineItem lineItem = new LineItem(p,10);
         session.setAttribute("item",lineItem);
+
+        //[] operator
+        Map<String, User> usersMap = UserIO.getUserMap(path);
+        session.setAttribute("usersMap",usersMap);
+
+        email = request.getParameter("email");
+        session.setAttribute("email" ,email);
+
+        //nested [] operator
 
         application.getRequestDispatcher(url).forward(request, response);
     }
