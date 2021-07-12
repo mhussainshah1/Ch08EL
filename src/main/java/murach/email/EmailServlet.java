@@ -42,36 +42,38 @@ public class EmailServlet extends HttpServlet {
 
             User user = new User(firstName, lastName, email);
             session.setAttribute("user", user);
-            UserIO.add(user,path);
+            UserIO.add(user, path);
+
+            //scope implicit EL objects - pageScope , requestScope, sessionScope, applicationScope
+            LocalDate currentDate = LocalDate.now();
+            request.setAttribute("currentDate", currentDate);
+
+            //[] operator
+            String[] colors = {"Red", "Green", "Blue"};
+            application.setAttribute("colors", colors);
+
+            List<User> users = UserIO.getUsers(path);
+            session.setAttribute("users", users);
+
+            //nested property
+            Product p = new Product();
+            p.setCode("pf01");
+            LineItem lineItem = new LineItem(p, 10);
+            session.setAttribute("item", lineItem);
+
+            //[] operator
+            Map<String, User> usersMap = UserIO.getUserMap(path);
+            session.setAttribute("usersMap", usersMap);
+
+            email = request.getParameter("email");
+            session.setAttribute("email", email);
+
+            //nested [] operator
+            String[] emails = {"jsmith@gmail.com", "joel@murach.com"};
+            session.setAttribute("emails", emails);
+
             url = "/thanks.jsp";
         }
-
-        //scope implicit EL objects - pageScope , requestScope, sessionScope, applicationScope
-        LocalDate currentDate = LocalDate.now();
-        request.setAttribute("currentDate", currentDate);
-
-        //[] operator
-        String[] colors = {"Red", "Green", "Blue"};
-        application.setAttribute("colors", colors);
-
-        List<User> users = UserIO.getUsers(path);
-        session.setAttribute("users" , users);
-
-        //nested property
-        Product p = new Product();
-        p.setCode("pf01");
-        LineItem lineItem = new LineItem(p,10);
-        session.setAttribute("item",lineItem);
-
-        //[] operator
-        Map<String, User> usersMap = UserIO.getUserMap(path);
-        session.setAttribute("usersMap",usersMap);
-
-        email = request.getParameter("email");
-        session.setAttribute("email" ,email);
-
-        //nested [] operator
-
         application.getRequestDispatcher(url).forward(request, response);
     }
 }

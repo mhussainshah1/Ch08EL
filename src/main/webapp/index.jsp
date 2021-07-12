@@ -26,5 +26,18 @@
         <input class="margin_left" type="submit" value="Join Now">
     </form>
 
+    <p><a href="EL-Standard-JSP-Tag.jsp">JSP Expression Language</a></p>
+    <p><a href="implicit-object.html">implicit object</a></p>
+    <p><a href=""></a></p>
+    <p><a href=""></a></p>
+    <p><a href=""></a></p>
+    <p><a href=""></a></p>
+    <p><a href=""></a></p>
+    <p><a href=""></a></p>
+    <p><a href=""></a></p>
+    <p><a href=""></a></p>
+    <p><a href=""></a></p>
+    <p><a href=""></a></p>
+    <p><a href=""></a></p>
 </body>
 </html>

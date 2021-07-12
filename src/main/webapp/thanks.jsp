@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Owner
-  Date: 7/5/2021
-  Time: 6:43 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -17,15 +10,26 @@
         <%--        EL--%>
         <h1>Expression Language</h1>
         <label>Email:</label>
-        <span>${user.email}</span><br>
-        <%--        or  --%>
-        <span>${sessionScope.user.email}</span><br>
-        <%--        or  --%>
-        <span>${user["email"]}</span><br>
+                                <span>${user.email}</span><br>
+                                <%--        or  --%>
+                                <span>${sessionScope.user.email}</span><br>
+                                <%--        or  --%>
+                                <span>${user["email"]}</span><br>
 
+        <%-- nested [] operator       --%>
+        <p>First name: ${usersMap[emails[0]].firstName}</p>
+
+        <%--this does not work because the attribute is enclosed in quotes        --%>
+        <p>First name: ${usersMap["emails[0]"].firstName}</p>
 
         <label>First Name:</label>
-        <span>${user.firstName}</span><br>
+                                <span>${user.firstName}</span><br>
+                                <%--        or--%>
+                                <p>first name: ${userMap[email].firstName}</p>
+
+                                <!-- this does not work because the attribute is enclosed in quotes -->
+                                <p>First name: ${userMap["email"].firstName}</p>
+
         <label>Last Name:</label>
         <span>${user.lastName}</span> <br>
 
@@ -72,6 +76,5 @@
         <p>First name: ${usersMap[email].firstName}</p>
         <%--this does not work because the attribute is enclosed in quotes        --%>
         <p>First name: ${usersMap["email"].firstName}</p>
-
 </body>
 </html>
