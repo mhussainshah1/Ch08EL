@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +10,10 @@
 <body>
     <h1>Join our email list</h1>
     <p>To jon our email list, enter your name and email address below.</p>
+
+    <c:if test="${message != null}">
+        <p><i>${message}</i></p>
+    </c:if>
 
     <form action="emailList" method="post">
         <input name="action" type="hidden" value="add">

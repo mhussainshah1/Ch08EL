@@ -6,7 +6,7 @@
     <link href="styles/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<h1>Arithematic EL Operators</h1>
+<h1>Arithmetic EL Operators</h1>
 <table>
     <tr>
         <td><b>Example</b></td>

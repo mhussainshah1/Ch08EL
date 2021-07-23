@@ -5,10 +5,12 @@
     <title>implicit EL objects</title>
 </head>
 <body>
-  <form action="emailList" method="post">
-    <p>First name: <input type="text" name="email"></p>
-    <p>Email address 1: <input type="text" name="email"></p>
-    <p>Email address 2: <input type="text" name="email"></p>
-  </form>
+<form action="emailList" method="post" >
+    <input type="hidden" name="action" value="implicitELObject">
+    <p>First name: <input name="firstName" type="text"></p>
+    <p>Email address 1: <input name="email" type="text"></p>
+    <p>Email address 2: <input name="email" type="text"></p>
+    <p><input type="submit" value="Join Now"></p>
+</form>
 </body>
 </html>
