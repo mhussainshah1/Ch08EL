@@ -76,6 +76,7 @@
     <%--this does not work because the attribute is enclosed in quotes        --%>
     <p>First name: ${usersMap["email"].firstName}</p>
 
+    <%--An HTML form that has two parameters with the same name--%>
     <p>
         First name: ${param.firstName}<br>
         Email address 1: ${paramValues.email[0]} <br>
@@ -90,7 +91,4 @@
     <%--How to work with cookies--%>
     <p>The email cookie: ${cookie.emailCookie.value}</p>
 </body>
-
-
 </html>
-
