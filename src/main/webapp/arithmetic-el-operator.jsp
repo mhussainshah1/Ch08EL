@@ -2,15 +2,15 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>EL operators</title>
+    <title>Arithmetic EL operators</title>
     <link href="styles/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <h1>Arithmetic EL Operators</h1>
 <table>
     <tr>
-        <td><b>Example</b></td>
-        <td><b>Result</b></td>
+        <th><b>Example</b></th>
+        <th><b>Result</b></th>
     </tr>
     <tr>
         <td>1 + 1</td>

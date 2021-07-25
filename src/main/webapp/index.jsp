@@ -36,13 +36,14 @@
     <p><a href=""></a></p>
     <p><a href=""></a></p>
     <p><a href=""></a></p>
-    <p><a href="arthimatic-el-operator.jsp">Arthematic EL Operator</a></p>
     <p><a href=""></a></p>
     <p><a href=""></a></p>
     <p><a href=""></a></p>
-    <p><a href=""></a></p>
-    <p><a href=""></a></p>
-    <p><a href=""></a></p>
-    <p><a href=""></a></p>
+    <p><a href="context.jsp">Context initialization</a></p>
+    <p><a href="arithmetic-el-operator.jsp">Arthematic EL Operator</a></p>
+    <p><a href="logical-el-operator.jsp">Logical operators</a></p>
+    <p><a href="disable-el.jsp">Disable EL</a></p>
+    <p><a href="disable-scripting.jsp">Disable scripting</a></p>
+
 </body>
 </html>

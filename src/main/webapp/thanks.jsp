@@ -48,7 +48,6 @@
 <label>Last Name:</label>
 <span><jsp:getProperty name="user" property="lastName"/></span> <br>
 
-
 <%--        scope implicit EL objects           --%>
 <p>The current date is ${currentDate}</p>
 <%--        or          --%>
@@ -82,5 +81,16 @@
     Email address 1: ${paramValues.email[0]} <br>
     Email address 2: ${paramValues.email[1]}
 </p>
+
+<%--how to get an HTTP header--%>
+<p>MIME types: ${header.accept}<br>
+   Compression types:${header["accept-encoding"]}
+</p>
+
+<%--How to work with cookies--%>
+<p>The email cookie: ${cookie.emailCookie.value}</p>
 </body>
+
+
 </html>
+
