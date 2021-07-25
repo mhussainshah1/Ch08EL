@@ -17,12 +17,10 @@ import java.util.Map;
 @WebServlet(name = "EmailServlet", value = "/emailList")
 public class EmailServlet extends HttpServlet {
 
-
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
     }
-
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

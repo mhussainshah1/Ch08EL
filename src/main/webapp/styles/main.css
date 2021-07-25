@@ -26,12 +26,6 @@ label {
     font-weight: bold;
 }
 
-input[type="text"], input[type="email"] { /* An attribute selector */
-    width: 15em;
-    margin-left: 0.5em;
-    margin-bottom: 0.5em;
-}
-
 span {
     margin-left: 0.5em;
     margin-bottom: 0.5em;
@@ -39,6 +33,12 @@ span {
 
 br {
     clear: both;
+}
+
+input[type="text"], input[type="email"] { /* An attribute selector */
+    width: 15em;
+    margin-left: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 /* The styles for the classes */
